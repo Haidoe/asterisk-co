@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import Layout from "./components/Layout";
+import MenuBar from "./components/MenuBar";
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        This is the App!!!
-      </h1>
-    </div>
+    <Layout>
+      <MenuBar />
+    </Layout>
   );
 }
 
