@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     background: "#FFF"
   },
   content: {
-    padding: 0
+    padding: "0 !important"
   },
   card: {
     backgroundColor: theme.palette.primary.main,
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     justifyContent: "space-between",
     [theme.breakpoints.up("lg")]: {
-      minHeight: 450
+      minHeight: 430
     }
   },
   typo: {
@@ -42,6 +42,9 @@ const useStyles = makeStyles(theme => ({
   expertiseItem: {
     padding: 0,
     alignItems: "start"
+  },
+  itemText: {
+    margin: "0 !important"
   }
 }));
 

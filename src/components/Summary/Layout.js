@@ -22,7 +22,7 @@ const Layout = ({ title, onClick, children }) => {
     <Grow in={visible} timeout={1500}>
       <Grid item xs={12} lg={4}>
         <Card className={classes.card}>
-          <CardContent className={classes.content}>
+          <CardContent classes={{ root: classes.content }}>
             <Typography variant="h5" className={classes.typo}>
               {title}
             </Typography>

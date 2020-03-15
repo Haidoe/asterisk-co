@@ -23,7 +23,7 @@ const Services = () => {
             <ListItemIcon className={classes.checkIcon}>
               <CheckIcon />
             </ListItemIcon>
-            <ListItemText primary={item} />
+            <ListItemText primary={item} className={classes.itemText} />
           </ListItem>
         ))}
       </List>
