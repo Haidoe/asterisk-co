@@ -26,22 +26,33 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 125,
     alignItems: "center",
     background: "transparent",
-    textAlign: "center"
+    textAlign: "center",
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: 140
+    }
   },
   typo: {
     margin: "0 auto",
-    marginBottom: "0.3em",
-    fontStyle: "italic",
+    fontFamily: "'Parisienne', cursive",
     [theme.breakpoints.up("sm")]: {
       width: "600px"
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "2em"
+      fontSize: "1.9em"
     }
   },
   typo2: {
     marginBottom: "1em",
-    color: "#FFF"
+    color: "#FFF",
+
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1em"
+    }
+  },
+  btn: {
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "0.8em"
+    }
   }
 }));
 
@@ -53,12 +64,12 @@ const Banner = () => {
       <Container>
         <Card className={classes.card} elevation={0}>
           <Typography variant="h4" className={classes.typo}>
-            <q>GUIDING YOU THROUGH THE WORLD OF RISK</q>
+            <q>Guiding you through the world of risk</q>
           </Typography>
           <Typography variant="h6" className={classes.typo2}>
             Asterisk Consultancy Inc.
           </Typography>
-          <Button color="primary" variant="contained">
+          <Button className={classes.btn} color="primary" variant="contained">
             Checkout our Services
           </Button>
         </Card>
