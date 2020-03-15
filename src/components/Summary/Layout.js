@@ -6,26 +6,37 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import VisibilitySensor from "react-visibility-sensor";
+import Grow from "@material-ui/core/Grow";
 
 const Layout = ({ title, onClick, children }) => {
   const classes = useStyles();
+  const [visible, setVisible] = React.useState(false);
+  const handleOnChange = event => {
+    if (!visible) {
+      setVisible(event);
+    }
+  };
 
   return (
-    <Grid item xs={12} lg={4}>
-      <Card className={classes.card}>
-        <CardContent className={classes.content}>
-          <Typography variant="h5" className={classes.typo}>
-            {title}
-          </Typography>
+    <Grow in={visible} timeout={1500}>
+      <Grid item xs={12} lg={4}>
+        <Card className={classes.card}>
+          <CardContent className={classes.content}>
+            <Typography variant="h5" className={classes.typo}>
+              {title}
+            </Typography>
+            <VisibilitySensor onChange={handleOnChange}>
+              <div>{children}</div>
+            </VisibilitySensor>
+          </CardContent>
 
-          {children}
-        </CardContent>
-
-        <Button onClick={onClick} color="secondary" className={classes.btn}>
-          More info...
-        </Button>
-      </Card>
-    </Grid>
+          <Button onClick={onClick} color="secondary" className={classes.btn}>
+            More info...
+          </Button>
+        </Card>
+      </Grid>
+    </Grow>
   );
 };
 
