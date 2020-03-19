@@ -12,7 +12,7 @@ const Summary = () => {
   return (
     <Box className={classes.box}>
       <Container>
-        <Grid spacing={5} container className={classes.grid}>
+        <Grid spacing={4} container className={classes.grid}>
           <RiskManagement />
           <Expertise />
           <Services />

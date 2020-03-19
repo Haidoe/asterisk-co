@@ -8,15 +8,11 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import VisibilitySensor from "react-visibility-sensor";
 import Grow from "@material-ui/core/Grow";
+import useVisible from "../../hooks/useVisible";
 
 const Layout = ({ title, onClick, children }) => {
   const classes = useStyles();
-  const [visible, setVisible] = React.useState(false);
-  const handleOnChange = event => {
-    if (!visible) {
-      setVisible(event);
-    }
-  };
+  const [visible, handleOnChange] = useVisible(false);
 
   return (
     <Grow in={visible} timeout={1500}>
@@ -26,7 +22,7 @@ const Layout = ({ title, onClick, children }) => {
             <Typography variant="h5" className={classes.typo}>
               {title}
             </Typography>
-            <VisibilitySensor onChange={handleOnChange}>
+            <VisibilitySensor partialVisibility onChange={handleOnChange}>
               <div>{children}</div>
             </VisibilitySensor>
           </CardContent>

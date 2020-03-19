@@ -7,6 +7,11 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import CheckIcon from "@material-ui/icons/Check";
+
+import VisibilitySensor from "react-visibility-sensor";
+import Slide from "@material-ui/core/Slide";
+import useVisible from "../../hooks/useVisible";
+
 import useStyles from "./styles";
 import susana from "./assets/susana.webp";
 import useToggle from "../../hooks/useToggle";
@@ -14,6 +19,7 @@ import useToggle from "../../hooks/useToggle";
 const Susana = () => {
   const classes = useStyles();
   const [btn, toggleBtn] = useToggle(false);
+  const [visible, toggleVisible] = useVisible(false);
 
   const list = [
     "Establishing a company’s Training Institute",
@@ -38,41 +44,69 @@ const Susana = () => {
   }
 
   return (
-    <Grid item xs={12} lg={6}>
-      <Card className={classes.portrait}>
-        <img src={susana} alt="susana" className={classes.portraitImage} />
-        <div className={classes.portraitTitle}>
-          <Typography variant="h4">SUSANA C. ALVAREZ </Typography>
-          <Typography variant="h5">Managing Director </Typography>
-        </div>
-      </Card>
-      <div className={classes.portraitContent}>
-        <Typography className={classes.paragraph} variant="h6">
-          Susana C. Alvarez has over 18 years of solid HR experience in all
-          facets of Human Resource Management gained from various industries.
-        </Typography>
+    <VisibilitySensor partialVisibility onChange={toggleVisible}>
+      <Grid item xs={12} lg={6}>
+        <Slide
+          in={visible}
+          direction="left"
+          mountOnEnter
+          unmountOnExit
+          timeout={1500}
+        >
+          <Card className={classes.portrait}>
+            <img src={susana} alt="susana" className={classes.portraitImage} />
+            <div className={classes.portraitTitle}>
+              <Typography variant="h4" className={classes.portraitName}>
+                SUSANA C. ALVAREZ
+              </Typography>
+              <Typography
+                variant="h5"
+                color="secondary"
+                className={classes.portraitPosition}
+              >
+                Managing Director
+              </Typography>
+            </div>
+          </Card>
+        </Slide>
 
-        <Typography variant="h5"> HR Programs that she developed </Typography>
+        <Slide
+          in={visible}
+          direction="up"
+          mountOnEnter
+          unmountOnExit
+          timeout={2500}
+        >
+          <div className={classes.portraitContent}>
+            <Typography className={classes.paragraph} variant="h6">
+              Susana C. Alvarez has over 18 years of solid HR experience in all
+              facets of Human Resource Management gained from various
+              industries.
+            </Typography>
 
-        <List component="ul" className={classes.expertiseList}>
-          {list.map(item => (
-            <ListItem className={classes.expertiseItem} key={item}>
-              <ListItemIcon className={classes.checkIcon}>
-                <CheckIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary={<Typography variant="h6">{item}</Typography>}
-                className={classes.itemText}
-              />
-            </ListItem>
-          ))}
+            <Typography variant="h5">HR Programs that she developed</Typography>
 
-          <ListItem button className={classes.moreBtn} onClick={toggleBtn}>
-            {btn ? "HIDE" : "MORE"} ...
-          </ListItem>
-        </List>
-      </div>
-    </Grid>
+            <List component="ul" className={classes.expertiseList}>
+              {list.map(item => (
+                <ListItem className={classes.expertiseItem} key={item}>
+                  <ListItemIcon className={classes.checkIcon}>
+                    <CheckIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<Typography variant="h6">{item}</Typography>}
+                    className={classes.itemText}
+                  />
+                </ListItem>
+              ))}
+
+              <ListItem button className={classes.moreBtn} onClick={toggleBtn}>
+                {btn ? "HIDE" : "MORE"} ...
+              </ListItem>
+            </List>
+          </div>
+        </Slide>
+      </Grid>
+    </VisibilitySensor>
   );
 };
 

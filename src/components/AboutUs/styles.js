@@ -2,10 +2,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   box: {
-    minHeight: "80vh",
+    minHeight: "100vh",
     background: "#CFDFEC",
     padding: "3em 2em",
-    textAlign: "center"
+    textAlign: "center",
+    overflowX: "hidden"
+  },
+  container: {
+    [theme.breakpoints.down("xs")]: {
+      padding: 0
+    }
   },
   header: {
     textTransform: "uppercase",
@@ -22,6 +28,9 @@ const useStyles = makeStyles(theme => ({
       bottom: 0,
       left: "25%",
       borderBottom: `5px solid ${theme.palette.primary.main}`
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3.5em"
     }
   },
   main: {
@@ -36,7 +45,10 @@ const useStyles = makeStyles(theme => ({
   },
   portrait: {
     display: "flex",
-    background: theme.palette.primary.main
+    background: theme.palette.primary.main,
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column"
+    }
   },
   portraitTitle: {
     flexGrow: 1,
@@ -44,11 +56,28 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      padding: "2em 0.2em"
+    }
+  },
+  portraitName: {
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.8em"
+    }
+  },
+  portraitPosition: {
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.4em"
+    }
   },
   portraitImage: {
     width: 180,
-    height: 180
+    height: 180,
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      height: "auto"
+    }
   },
   portraitContent: {
     marginTop: "3em",
