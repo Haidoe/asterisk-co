@@ -4,6 +4,7 @@ import MenuBar from "./components/MenuBar";
 import Banner from "./components/Banner";
 import Summary from "./components/Summary";
 import AboutUs from "./components/AboutUs";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Banner />
       <Summary />
       <AboutUs />
+      <Projects />
     </Layout>
   );
 }

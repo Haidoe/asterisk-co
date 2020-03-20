@@ -2,11 +2,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   box: {
-    minHeight: "100vh",
     background: "#CFDFEC",
     padding: "3em 2em",
     textAlign: "center",
-    overflowX: "hidden"
+    overflow: "hidden"
   },
   container: {
     [theme.breakpoints.down("xs")]: {
