@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/asterisk-co/static/js/main.7d79cf2b.chunk.js",
-    "main.js.map": "/asterisk-co/static/js/main.7d79cf2b.chunk.js.map",
+    "main.js": "/asterisk-co/static/js/main.95304dc6.chunk.js",
+    "main.js.map": "/asterisk-co/static/js/main.95304dc6.chunk.js.map",
     "runtime-main.js": "/asterisk-co/static/js/runtime-main.ac0bc6d2.js",
     "runtime-main.js.map": "/asterisk-co/static/js/runtime-main.ac0bc6d2.js.map",
-    "static/js/2.045d1d20.chunk.js": "/asterisk-co/static/js/2.045d1d20.chunk.js",
-    "static/js/2.045d1d20.chunk.js.map": "/asterisk-co/static/js/2.045d1d20.chunk.js.map",
+    "static/js/2.99deaae8.chunk.js": "/asterisk-co/static/js/2.99deaae8.chunk.js",
+    "static/js/2.99deaae8.chunk.js.map": "/asterisk-co/static/js/2.99deaae8.chunk.js.map",
     "index.html": "/asterisk-co/index.html",
-    "precache-manifest.5f9334c8539faa89850c05aa2165e3bd.js": "/asterisk-co/precache-manifest.5f9334c8539faa89850c05aa2165e3bd.js",
+    "precache-manifest.f73d2dacf53c07dae5e128c7a1d3481e.js": "/asterisk-co/precache-manifest.f73d2dacf53c07dae5e128c7a1d3481e.js",
     "service-worker.js": "/asterisk-co/service-worker.js",
-    "static/js/2.045d1d20.chunk.js.LICENSE.txt": "/asterisk-co/static/js/2.045d1d20.chunk.js.LICENSE.txt",
+    "static/js/2.99deaae8.chunk.js.LICENSE.txt": "/asterisk-co/static/js/2.99deaae8.chunk.js.LICENSE.txt",
     "static/media/arch-lg.jpg": "/asterisk-co/static/media/arch-lg.fb558d7a.jpg",
     "static/media/project-1.jpg": "/asterisk-co/static/media/project-1.c1e97921.jpg",
     "static/media/project-2.jpg": "/asterisk-co/static/media/project-2.3ce51d31.jpg",
@@ -19,7 +19,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ac0bc6d2.js",
-    "static/js/2.045d1d20.chunk.js",
-    "static/js/main.7d79cf2b.chunk.js"
+    "static/js/2.99deaae8.chunk.js",
+    "static/js/main.95304dc6.chunk.js"
   ]
 }
