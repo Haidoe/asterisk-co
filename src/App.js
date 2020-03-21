@@ -6,18 +6,18 @@ import Summary from "./components/Summary";
 import AboutUs from "./components/AboutUs";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import Fab from "./components/Fab";
 
-function App() {
-  return (
-    <Layout>
-      <MenuBar />
-      <Banner />
-      <Summary />
-      <AboutUs />
-      <Projects />
-      <Footer />
-    </Layout>
-  );
-}
+const App = () => (
+  <Layout>
+    <MenuBar />
+    <Banner />
+    <Summary />
+    <AboutUs />
+    <Projects />
+    <Fab />
+    <Footer />
+  </Layout>
+);
 
 export default App;
