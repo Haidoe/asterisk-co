@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import Summary from "./components/Summary";
 import AboutUs from "./components/AboutUs";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Summary />
       <AboutUs />
       <Projects />
+      <Footer />
     </Layout>
   );
 }
