@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f655ceb6e6b291299b1d52bb8e8991d",
+    "revision": "f2349bc986f9fbb845c5a16cbc91959b",
     "url": "/asterisk-co/index.html"
   },
   {
-    "revision": "f8fcb3c8a1ed451ced29",
-    "url": "/asterisk-co/static/js/2.d1f333e7.chunk.js"
+    "revision": "7ce3a89cbf6b72b3c017",
+    "url": "/asterisk-co/static/js/2.0de0448c.chunk.js"
   },
   {
     "revision": "4214db9a6c23cd334176e62fe82579f5",
-    "url": "/asterisk-co/static/js/2.d1f333e7.chunk.js.LICENSE.txt"
+    "url": "/asterisk-co/static/js/2.0de0448c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b61d47919fd5e9d1d57",
-    "url": "/asterisk-co/static/js/main.9b3b8fb4.chunk.js"
+    "revision": "71ff9ea41f324a952e8d",
+    "url": "/asterisk-co/static/js/main.984fd4d1.chunk.js"
   },
   {
     "revision": "f4e70aa12a49f9d575e8",
