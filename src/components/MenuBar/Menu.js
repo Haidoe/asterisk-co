@@ -1,12 +1,14 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import List from "@material-ui/core/MenuList";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
 import MobileMenu from "./MobileMenu";
 import useToggle from "../../hooks/useToggle";
-import useInput from "../../hooks/useInput";
+import list from "./list";
 
 const useStyles = makeStyles(theme => ({
   drawerPaper: {
@@ -18,15 +20,32 @@ const useStyles = makeStyles(theme => ({
     }
   },
   tabs: {
+    display: "flex",
     [theme.breakpoints.down("md")]: {
       display: "none"
     }
+  },
+  menuItem: {
+    whiteSpace: "nowrap"
+  },
+  menuBtn: {
+    background: "transparent !important",
+    "&:hover": {
+      color: theme.palette.secondary.main
+    }
+  },
+  menuText: {
+    fontWeight: "bold !important"
+  },
+  selected: {
+    color: theme.palette.secondary.main,
+    background: "transparent !important"
   }
 }));
 
 const Menu = () => {
+  const { pathname } = useLocation();
   const classes = useStyles();
-  const [tab, handleTab] = useInput("home");
   const [mobile, handleMobile] = useToggle(false);
   return (
     <>
@@ -38,13 +57,30 @@ const Menu = () => {
         <MenuIcon />
       </IconButton>
 
-      <Tabs value={tab} onChange={handleTab} className={classes.tabs}>
-        <Tab label="Home" value="home" />
-        <Tab label="About Us" />
-        <Tab label="Our Services" />
-        <Tab label="Projects" />
-        <Tab label="Contact Us" />
-      </Tabs>
+      <List className={classes.tabs}>
+        {list.map(item => (
+          <ListItem
+            button
+            key={item.title}
+            component={Link}
+            to={item.link}
+            className={classes.menuItem}
+            classes={{
+              selected: classes.selected,
+              button: classes.menuBtn
+            }}
+            selected={pathname === item.link}
+            disableRipple
+          >
+            <ListItemText
+              primary={item.title}
+              classes={{
+                primary: classes.menuText
+              }}
+            />
+          </ListItem>
+        ))}
+      </List>
 
       <MobileMenu visible={mobile} onClose={handleMobile} />
     </>

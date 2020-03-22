@@ -1,17 +1,14 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import Divider from "@material-ui/core/Divider";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import MenuList from "@material-ui/core/MenuList";
+import MenuItem from "@material-ui/core/MenuItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MessageIcon from "@material-ui/icons/Message";
-import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
-import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
-import HomeIcon from "@material-ui/icons/Home";
-import InfoIcon from "@material-ui/icons/Info";
 import { makeStyles } from "@material-ui/core/styles";
+import list from "./list";
 
 const useStyles = makeStyles(theme => ({
   drawerPaper: {
@@ -23,39 +20,19 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.main,
     transform: "scale(0.8)"
   },
-  toolbar: theme.mixins.toolbar
-}));
-
-const list = [
-  {
-    title: "HOME",
-    icon: <HomeIcon />,
-    link: "/"
+  toolbar: theme.mixins.toolbar,
+  menuItem: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1)
   },
-  {
-    title: "ABOUT US",
-    icon: <InfoIcon />,
-    link: "/about"
-  },
-  {
-    title: "OUR SERVICES",
-    icon: <BusinessCenterIcon />,
-    link: "/about"
-  },
-  {
-    title: "PROJECTS",
-    icon: <FormatListBulletedIcon />,
-    link: "/about"
-  },
-  {
-    title: "CONTACT US",
-    icon: <MessageIcon />,
-    link: "/about"
+  selected: {
+    background: "rgba(255, 255, 255, 0.2) !important"
   }
-];
+}));
 
 const MobileMenu = ({ visible, onClose }) => {
   const classes = useStyles();
+  const { pathname } = useLocation();
 
   return (
     <Hidden lgUp>
@@ -70,16 +47,26 @@ const MobileMenu = ({ visible, onClose }) => {
         <div>
           <div className={classes.toolbar} />
           <Divider />
-          <List>
+          <MenuList>
             {list.map(item => (
-              <ListItem button key={item.title}>
+              <MenuItem
+                button
+                key={item.title}
+                component={Link}
+                to={item.link}
+                className={classes.menuItem}
+                classes={{
+                  selected: classes.selected
+                }}
+                selected={pathname === item.link}
+              >
                 <ListItemIcon className={classes.icon}>
                   {item.icon}
                 </ListItemIcon>
                 <ListItemText primary={item.title} />
-              </ListItem>
+              </MenuItem>
             ))}
-          </List>
+          </MenuList>
         </div>
       </Drawer>
     </Hidden>

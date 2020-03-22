@@ -51,7 +51,8 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: "2em",
     [theme.breakpoints.down("sm")]: {
       textAlign: "justify",
-      padding: "1.5em 0"
+      padding: "1.5em 0",
+      paddingBottom: 0
     }
   },
   projectArticleTitle: {
@@ -74,7 +75,8 @@ const useStyles = makeStyles(theme => ({
     paddingRight: "2em",
     [theme.breakpoints.down("sm")]: {
       textAlign: "justify",
-      padding: "1.5em 0"
+      padding: "1.5em 0",
+      paddingBottom: 0
     }
   }
 }));
