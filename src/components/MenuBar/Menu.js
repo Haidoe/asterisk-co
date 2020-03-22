@@ -15,13 +15,13 @@ const useStyles = makeStyles(theme => ({
     width: "250px"
   },
   menuButton: {
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none"
     }
   },
   tabs: {
     display: "flex",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none"
     }
   },
