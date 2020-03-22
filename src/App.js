@@ -7,6 +7,7 @@ import AboutUs from "./components/AboutUs";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Fab from "./components/Fab";
+import GetInTouch from "./components/GetInTouch";
 
 const App = () => (
   <Layout>
@@ -16,6 +17,7 @@ const App = () => (
     <AboutUs />
     <Projects />
     <Fab />
+    <GetInTouch />
     <Footer />
   </Layout>
 );

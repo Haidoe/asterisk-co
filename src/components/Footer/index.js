@@ -7,7 +7,10 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   box: {
     background: theme.palette.primary.main,
-    padding: "4em"
+    padding: "5em",
+    [theme.breakpoints.down("sm")]: {
+      padding: "3em"
+    }
   },
   container: {
     display: "flex",
@@ -27,6 +30,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: "1.5em"
     }
+  },
+  credits: {
+    marginTop: "1em"
   }
 }));
 
@@ -48,7 +54,7 @@ const Footer = () => {
             </Typography>
           </section>
           <div className={classes.container}>
-            <Typography variant="h6">
+            <Typography variant="h6" className={classes.credits}>
               &#169; 2020 All Rights Reserved
             </Typography>
           </div>
