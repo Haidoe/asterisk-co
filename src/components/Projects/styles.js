@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   box: { paddingTop: "3em", textAlign: "center", overflow: "hidden" },
-  box2: { background: "#f1f1f1", overflow: "hidden" },
+  box2: { background: "#f7f7f7", overflow: "hidden" },
   header: {
     textTransform: "uppercase",
     display: "inline-block",
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   projectContainer: {
     display: "flex",
-    padding: "3em 0",
+    padding: "5em 0",
     minHeight: 300,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column"
@@ -62,7 +62,7 @@ const useStyles = makeStyles(theme => ({
   },
   projectContainer2: {
     display: "flex",
-    padding: "3em 0",
+    padding: "5em 0",
     minHeight: 300,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column-reverse"

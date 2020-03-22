@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <Box>
         <CssBaseline />
+        <div style={theme.mixins.toolbar} />
         {children}
       </Box>
     </ThemeProvider>

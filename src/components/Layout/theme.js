@@ -11,6 +11,11 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: "Work Sans"
+  },
+  mixins: {
+    toolbar: {
+      minHeight: 65
+    }
   }
 });
 

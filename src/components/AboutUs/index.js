@@ -1,20 +1,20 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+
 //Transitions
 import Grow from "@material-ui/core/Grow";
 import Slide from "@material-ui/core/Slide";
 import VisibilitySensor from "react-visibility-sensor";
 
-import Raymundo from "./Raymundo";
-import Susana from "./Susana";
 import useStyles from "./styles";
 import useVisible from "../../hooks/useVisible";
+import About from "../../Pages/AboutUs";
 
-const AboutUs = () => {
+const AboutUs = ({ children, boxColor, title }) => {
   const classes = useStyles();
+
   const [vTitle, toggleVTitle] = useVisible(false);
   const [content1, toggleContent1] = useVisible(false);
   const [content2, toggleContent2] = useVisible(false);
@@ -26,12 +26,12 @@ const AboutUs = () => {
   };
 
   return (
-    <Box className={classes.box}>
+    <Box className={classes.box} style={{ background: boxColor }}>
       <Container className={classes.container}>
         <VisibilitySensor onChange={handleChange}>
           <Grow in={vTitle} timeout={1500}>
             <Typography variant="h2" className={classes.header}>
-              About us
+              {title}
             </Typography>
           </Grow>
         </VisibilitySensor>
@@ -71,14 +71,14 @@ const AboutUs = () => {
             </Typography>
           </div>
         </Slide>
-
-        <Grid container spacing={5} className={classes.grid}>
-          <Raymundo />
-          <Susana />
-        </Grid>
+        {children}
       </Container>
     </Box>
   );
+};
+
+AboutUs.defaultProps = {
+  title: "About us"
 };
 
 export default AboutUs;

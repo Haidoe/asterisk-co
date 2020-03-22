@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => ({
   box: {
     background: "#f1f1f1",
-    padding: "3em 0"
+    padding: "5em 0"
   },
   typo: {
     textAlign: "center",

@@ -8,7 +8,6 @@ import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: "4em",
     paddingTop: "1.2em",
     background: theme.palette.primary.main,
     minHeight: "100vh",
