@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2349bc986f9fbb845c5a16cbc91959b",
+    "revision": "414fc891b089ce44142b402c85520fcb",
     "url": "/asterisk-co/index.html"
   },
   {
-    "revision": "7ce3a89cbf6b72b3c017",
-    "url": "/asterisk-co/static/js/2.0de0448c.chunk.js"
+    "revision": "d7fc0b816a8fc07cb1d4",
+    "url": "/asterisk-co/static/js/2.91a988b4.chunk.js"
   },
   {
     "revision": "4214db9a6c23cd334176e62fe82579f5",
-    "url": "/asterisk-co/static/js/2.0de0448c.chunk.js.LICENSE.txt"
+    "url": "/asterisk-co/static/js/2.91a988b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "71ff9ea41f324a952e8d",
-    "url": "/asterisk-co/static/js/main.984fd4d1.chunk.js"
+    "revision": "06a68a6f2b29587378a1",
+    "url": "/asterisk-co/static/js/main.270b10f5.chunk.js"
   },
   {
     "revision": "f4e70aa12a49f9d575e8",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fb558d7af48ba1b0694565e3c75ba214",
     "url": "/asterisk-co/static/media/arch-lg.fb558d7a.jpg"
+  },
+  {
+    "revision": "cb37866f6fe7ed0044150cfe687c1c9b",
+    "url": "/asterisk-co/static/media/consult.cb37866f.webp"
   },
   {
     "revision": "c1e979211c2915825868ed72a58be0c0",
@@ -36,8 +40,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/asterisk-co/static/media/project-3.554ae7fd.jpg"
   },
   {
+    "revision": "91f039444ca16e2556d4169309da6716",
+    "url": "/asterisk-co/static/media/project-management.91f03944.webp"
+  },
+  {
     "revision": "cf589907f7fe26b261a14ddc5df444fb",
     "url": "/asterisk-co/static/media/reymund.cf589907.webp"
+  },
+  {
+    "revision": "17e3728c6a4ff3f77167116c56381b66",
+    "url": "/asterisk-co/static/media/strategy.17e3728c.webp"
   },
   {
     "revision": "b79c0e432a38493e430ebb2c48c2907d",

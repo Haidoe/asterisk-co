@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.js": "/asterisk-co/static/js/main.984fd4d1.chunk.js",
-    "main.js.map": "/asterisk-co/static/js/main.984fd4d1.chunk.js.map",
+    "main.js": "/asterisk-co/static/js/main.270b10f5.chunk.js",
+    "main.js.map": "/asterisk-co/static/js/main.270b10f5.chunk.js.map",
     "runtime-main.js": "/asterisk-co/static/js/runtime-main.ac0bc6d2.js",
     "runtime-main.js.map": "/asterisk-co/static/js/runtime-main.ac0bc6d2.js.map",
-    "static/js/2.0de0448c.chunk.js": "/asterisk-co/static/js/2.0de0448c.chunk.js",
-    "static/js/2.0de0448c.chunk.js.map": "/asterisk-co/static/js/2.0de0448c.chunk.js.map",
+    "static/js/2.91a988b4.chunk.js": "/asterisk-co/static/js/2.91a988b4.chunk.js",
+    "static/js/2.91a988b4.chunk.js.map": "/asterisk-co/static/js/2.91a988b4.chunk.js.map",
     "index.html": "/asterisk-co/index.html",
-    "precache-manifest.550826f8db6d83262a3c918e4a999cb5.js": "/asterisk-co/precache-manifest.550826f8db6d83262a3c918e4a999cb5.js",
+    "precache-manifest.6f1cb16c2538b11e7feb89cf4879143f.js": "/asterisk-co/precache-manifest.6f1cb16c2538b11e7feb89cf4879143f.js",
     "service-worker.js": "/asterisk-co/service-worker.js",
-    "static/js/2.0de0448c.chunk.js.LICENSE.txt": "/asterisk-co/static/js/2.0de0448c.chunk.js.LICENSE.txt",
+    "static/js/2.91a988b4.chunk.js.LICENSE.txt": "/asterisk-co/static/js/2.91a988b4.chunk.js.LICENSE.txt",
     "static/media/arch-lg.jpg": "/asterisk-co/static/media/arch-lg.fb558d7a.jpg",
+    "static/media/consult.webp": "/asterisk-co/static/media/consult.cb37866f.webp",
     "static/media/project-1.jpg": "/asterisk-co/static/media/project-1.c1e97921.jpg",
     "static/media/project-2.jpg": "/asterisk-co/static/media/project-2.3ce51d31.jpg",
     "static/media/project-3.jpg": "/asterisk-co/static/media/project-3.554ae7fd.jpg",
+    "static/media/project-management.webp": "/asterisk-co/static/media/project-management.91f03944.webp",
     "static/media/reymund.webp": "/asterisk-co/static/media/reymund.cf589907.webp",
+    "static/media/strategy.webp": "/asterisk-co/static/media/strategy.17e3728c.webp",
     "static/media/susana.webp": "/asterisk-co/static/media/susana.b79c0e43.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.ac0bc6d2.js",
-    "static/js/2.0de0448c.chunk.js",
-    "static/js/main.984fd4d1.chunk.js"
+    "static/js/2.91a988b4.chunk.js",
+    "static/js/main.270b10f5.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/asterisk-co/precache-manifest.550826f8db6d83262a3c918e4a999cb5.js"
+  "/asterisk-co/precache-manifest.6f1cb16c2538b11e7feb89cf4879143f.js"
 );
 
 self.addEventListener('message', (event) => {
