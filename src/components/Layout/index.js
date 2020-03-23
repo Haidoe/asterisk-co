@@ -4,6 +4,9 @@ import Box from "@material-ui/core/Box";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme";
 
+import MenuBar from "../MenuBar";
+import Footer from "../Footer";
+
 const Layout = ({ children }) => {
   useEffect(() => {
     window.scrollTo({
@@ -17,7 +20,9 @@ const Layout = ({ children }) => {
       <Box>
         <CssBaseline />
         <div style={theme.mixins.toolbar} />
+        <MenuBar />
         {children}
+        <Footer />
       </Box>
     </ThemeProvider>
   );
