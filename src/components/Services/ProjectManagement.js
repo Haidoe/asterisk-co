@@ -1,16 +1,18 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import photo from "./assets/project-2.jpg";
-import useStyles from "./styles";
+import photo from "./assets/project-management.webp";
+import useStyles from "../Projects/styles";
+//For Better User Experience
 import VisibilitySensor from "react-visibility-sensor";
 import Slide from "@material-ui/core/Slide";
 import useVisible from "../../hooks/useVisible";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-const Project = () => {
+const ProjectManagement = () => {
   const classes = useStyles();
   const [visible, toggleVisible] = useVisible(false);
   const theme = useTheme();
@@ -26,7 +28,7 @@ const Project = () => {
                 <img
                   src={photo}
                   className={classes.projectImg}
-                  alt="asterisk-project-one"
+                  alt="project-management"
                 />
               </div>
             </Slide>
@@ -37,7 +39,7 @@ const Project = () => {
                   variant="h4"
                   className={classes.projectArticleTitle}
                 >
-                  Project 3
+                  Project Management
                 </Typography>
                 <Typography variant="h6">
                   Lorem Ipsum is simply dummy text of the printing and
@@ -46,6 +48,14 @@ const Project = () => {
                   printer took a galley of type and scrambled it to make a type
                   specimen book.
                 </Typography>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.projectBtn}
+                  fullWidth={matches}
+                >
+                  Book now
+                </Button>
               </article>
             </Slide>
           </div>
@@ -55,4 +65,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectManagement;

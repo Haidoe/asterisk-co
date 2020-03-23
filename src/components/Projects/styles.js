@@ -78,6 +78,12 @@ const useStyles = makeStyles(theme => ({
       padding: "1.5em 0",
       paddingBottom: 0
     }
+  },
+  projectBtn: {
+    marginTop: "1em",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "2em"
+    }
   }
 }));
 
