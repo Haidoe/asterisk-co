@@ -8,12 +8,15 @@ import useStyles from "../Projects/styles";
 import VisibilitySensor from "react-visibility-sensor";
 import Slide from "@material-ui/core/Slide";
 import useVisible from "../../hooks/useVisible";
+import useToggle from "../../hooks/useToggle";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Modal from "./Modal";
 
 const CorporateStrategy = () => {
   const classes = useStyles();
   const [visible, toggleVisible] = useVisible(false);
+  const [modal, toggleModal] = useToggle(false);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -52,6 +55,7 @@ const CorporateStrategy = () => {
                   color="primary"
                   className={classes.projectBtn}
                   fullWidth={matches}
+                  onClick={toggleModal}
                 >
                   Book now
                 </Button>
@@ -59,6 +63,7 @@ const CorporateStrategy = () => {
             </Slide>
           </div>
         </VisibilitySensor>
+        <Modal visible={modal} onClose={toggleModal} />
       </Container>
     </Box>
   );

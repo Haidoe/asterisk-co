@@ -10,12 +10,16 @@ import Slide from "@material-ui/core/Slide";
 import useVisible from "../../hooks/useVisible";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import useToggle from "../../hooks/useToggle";
+import Modal from "./Modal";
 
 const Consulting = () => {
   const classes = useStyles();
   const [visible, toggleVisible] = useVisible(false);
+  const [modal, toggleModal] = useToggle(false);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box className={classes.box2}>
       <Container>
@@ -42,6 +46,7 @@ const Consulting = () => {
                   color="primary"
                   className={classes.projectBtn}
                   fullWidth={matches}
+                  onClick={toggleModal}
                 >
                   Book now
                 </Button>
@@ -59,6 +64,7 @@ const Consulting = () => {
             </div>
           </div>
         </VisibilitySensor>
+        <Modal visible={modal} onClose={toggleModal} />
       </Container>
     </Box>
   );

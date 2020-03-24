@@ -10,7 +10,6 @@ import VisibilitySensor from "react-visibility-sensor";
 
 import useStyles from "./styles";
 import useVisible from "../../hooks/useVisible";
-import About from "../../Pages/AboutUs";
 
 const AboutUs = ({ children, boxColor, title }) => {
   const classes = useStyles();
