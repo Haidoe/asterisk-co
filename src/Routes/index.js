@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Projects from "../Pages/Projects";
 import Services from "../Pages/Services";
+import ContactUs from "../Pages/Contacts";
 
 const Routes = () => (
   <Switch>
@@ -21,6 +22,10 @@ const Routes = () => (
 
     <Route path="/projects">
       <Projects />
+    </Route>
+
+    <Route path="/contact-us">
+      <ContactUs />
     </Route>
 
     <Route exact path="*">
