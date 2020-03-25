@@ -1,11 +1,13 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+import useStyles from "./styles";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const Map = props => {
+  const classes = useStyles();
   return (
-    <div style={{ height: "400px", width: "100%", padding: "3em 0" }}>
+    <div className={classes.mapContainer}>
       <GoogleMapReact
         bootstrapURLKeys={{
           key: "AIzaSyCv2DwsHyygOPitFASK9IGXn_JfvLWg154"

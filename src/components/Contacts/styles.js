@@ -43,13 +43,24 @@ const useStyles = makeStyles(theme => ({
   },
   mailContainer: {
     padding: "0 2em",
-    textAlign: "right",
+    textAlign: "left",
     [theme.breakpoints.down("sm")]: {
       padding: 0
     }
   },
+  mailBtn: {
+    textAlign: "right"
+  },
   mailInput: {
     marginBottom: "1em !important"
+  },
+  mapContainer: {
+    height: "400px",
+    width: "100%",
+    marginTop: "125px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "50px"
+    }
   }
 }));
 
