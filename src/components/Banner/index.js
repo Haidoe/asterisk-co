@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import { Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -30,6 +31,7 @@ const useStyles = makeStyles(theme => ({
       paddingTop: 140
     }
   },
+
   typo: {
     margin: "0 auto",
     fontFamily: "'Parisienne', cursive",
@@ -40,6 +42,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: "1.9em"
     }
   },
+
   typo2: {
     marginBottom: "1em",
     color: "#FFF",
@@ -48,6 +51,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: "1em"
     }
   },
+
   btn: {
     [theme.breakpoints.down("xs")]: {
       fontSize: "0.8em"
@@ -68,7 +72,13 @@ const Banner = () => {
           <Typography variant="h6" className={classes.typo2}>
             Asterisk Consultancy Inc.
           </Typography>
-          <Button className={classes.btn} color="primary" variant="contained">
+          <Button
+            component={Link}
+            to="/services"
+            className={classes.btn}
+            color="primary"
+            variant="contained"
+          >
             Checkout our Services
           </Button>
         </Card>

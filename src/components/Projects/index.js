@@ -7,14 +7,25 @@ import Project from "./Project";
 import Project2 from "./Project2";
 import Project3 from "./Project3";
 
+//Transition
+import Grow from "@material-ui/core/Grow";
+import VisibilitySensor from "react-visibility-sensor";
+import useVisible from "../../hooks/useVisible";
+
 const Projects = () => {
   const classes = useStyles();
+  const [title, toggleTitle] = useVisible(false);
+
   return (
     <Box className={classes.box}>
       <Container>
-        <Typography color="primary" variant="h2" className={classes.header}>
-          PROJECTS
-        </Typography>
+        <VisibilitySensor onChange={toggleTitle}>
+          <Grow in={title} timeout={1500}>
+            <Typography variant="h2" color="primary" className={classes.header}>
+              PROJECTS
+            </Typography>
+          </Grow>
+        </VisibilitySensor>
       </Container>
       <main className={classes.projectWrapper}>
         <Project />

@@ -8,15 +8,25 @@ import Map from "./Map";
 import Mail from "./Mail";
 import useStyles from "./styles";
 
+//Transition
+import Grow from "@material-ui/core/Grow";
+import VisibilitySensor from "react-visibility-sensor";
+import useVisible from "../../hooks/useVisible";
+
 const Contacts = props => {
   const classes = useStyles();
+  const [title, toggleTitle] = useVisible(false);
 
   return (
     <Box className={classes.box}>
       <Container>
-        <Typography variant="h2" color="primary" className={classes.header}>
-          Contact us
-        </Typography>
+        <VisibilitySensor onChange={toggleTitle}>
+          <Grow in={title} timeout={1500}>
+            <Typography variant="h2" color="primary" className={classes.header}>
+              Contact us
+            </Typography>
+          </Grow>
+        </VisibilitySensor>
 
         <Grid container spacing={3} className={classes.grid}>
           <Grid item sm={12} md={6}>

@@ -3,8 +3,13 @@ import TextField from "@material-ui/core/TextField";
 import useStyles from "./styles";
 import Button from "@material-ui/core/Button";
 import SendIcon from "@material-ui/icons/Send";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 const Mail = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   const inputProps = {
     variant: "outlined",
@@ -24,6 +29,7 @@ const Mail = () => {
           color="primary"
           startIcon={<SendIcon />}
           size="large"
+          fullWidth={matches}
         >
           SEND MESSAGE
         </Button>
